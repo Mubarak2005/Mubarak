@@ -26,23 +26,23 @@ const ProjectSection = () => {
   const projects = [
     {
       title: "Redesigned Amul",
-      back: "./src/assets/Mask group-9.webp",
+      back: "/images/Mask group-9.webp",
       color: "#8e44ad",
-      imgSrc: "./src/assets/amul.gif",
+      imgSrc: "/images/amul.gif",
       technologies: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "ScrollTrigger", "Locomotive"]
     },
     {
       title: "Redesigned Asian Paints",
-      back: "./src/assets/Mask group-11.webp",
+      back: "/images/Mask group-11.webp",
       color: "#f39c12",
-      imgSrc: "./src/assets/asian-paints.gif",
+      imgSrc: "/images/asian-paints.gif",
       technologies: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "ScrollTrigger", "Locomotive", "Shery JS"]
     },
     {
       title: "E Commerce",
-      back: "./src/assets/Mask group-13.webp",
+      back: "/images/Mask group-13.webp",
       color: "#2ecc71",
-      imgSrc: "./src/assets/e-commerce.gif",
+      imgSrc: "/images/e-commerce.gif",
       technologies: ["HTML", "Tailwind CSS", "JavaScript"]
     }
   ];
