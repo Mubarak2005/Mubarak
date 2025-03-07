@@ -92,7 +92,7 @@ const Navbar = () => {
         <>
             <div className={`navbar-l opacity-0 blur-[10px] fixed font-[Azonix] text-[#fff] z-[991] top-5 w-full flex justify-between items-center px-3 md:px-10 mix-blend-difference`}>
                 <div className="">
-                    <img className='w-[10vw] md:w-[7vw] lg:w-[6vw] xl:w-[5vw] 2xl:w-[4vw] ' src="./src/assets/mk_logo.webp" alt="" />
+                    <img className='w-[10vw] md:w-[7vw] lg:w-[6vw] xl:w-[5vw] 2xl:w-[4vw] ' src="/images/mk_logo.webp" alt="" />
                 </div>
                 <div onClick={clickBurger} className="burger pointer-events-auto h-5 w-12 flex flex-col justify-center items-center gap-2 cursor-pointer relative">
                     <div className={`b1 w-10 md:w-12 h-[.1rem] bg-[#fff] relative`}></div>
