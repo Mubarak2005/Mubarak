@@ -5,6 +5,7 @@ const Loading = () => {
     const textRef = useRef(null);
 
     useEffect(() => {
+        document.querySelector("body").style.overflow = "hidden";
         if (!textRef.current) return;
         
         const textContainer = textRef.current;
@@ -36,6 +37,7 @@ const Loading = () => {
             ...loadingAnimation,
             onComplete: () => {
                 document.querySelector(".loading-section").style.display = "none";
+                document.querySelector("body").style.overflow = "visible"
             }
         });
 
