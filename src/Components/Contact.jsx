@@ -67,7 +67,7 @@ const Contact = () => {
 
       {/* Decorative Image */}
       <div className="contact-img blur-[10px] scale-[.7] opacity-[0] h-fit w-fit drop-shadow-2xl absolute top-10 sm:top-0 xl:top-36 right-10 md:right-36 rotate-img">
-        <img className="w-[15vw] md:w-[10vw] " src="./src/assets/Mask group-4.webp" alt="Contact Element" />
+        <img className="w-[15vw] md:w-[10vw] " src="/images/Mask group-4.webp" alt="Contact Element" />
       </div>
     </div>
   );
