@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='w-full font-[Hanson] flex flex-col md:flex-row gap-10 '>
         <div className='w-full md:w-1/2 h-1/2 md:h-full relative'>
           <div className="h-fit w-fit drop-shadow-2xl absolute -top-10 md:top-20 left-0 md:left-20 rotate-img ">
-            <img className="w-20" src="./src/assets/Mask group-12.webp" alt="Footer Element" />
+            <img className="w-20" src="/images/Mask group-12.webp" alt="Footer Element" />
           </div>
           {/* <h1 className='text-[5vw] leading-none gradient-anim2 font-[Abuget] px-4'>Mubarak Ansari</h1> */}
           <h1 className='text-[10vw] md:text-[5vw] leading-[1vw] font-[Brigends] text-center '><span className='font-[Abuget] px-3 text-[15vw] md:text-[10vw] gradient-anim leading-none relative z-[1] '>Mubarak</span> Ansari</h1>
