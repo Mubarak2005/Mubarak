@@ -111,7 +111,7 @@ const Hero = () => {
       </div>
       {/* <img loading="lazy" className='md:w-[15rem] blur-lg ' src="./src/assets/CS_Flower_7.webp" alt="Hero Element" /> */}
       <div className='tri-el h-fit w-fit video-div opacity-0 scale-[.9] blur-[10px]  absolute left-0 md:left-48 top-10 z-[1] '>
-        <img loading="lazy" className='md:w-[5rem] absolute z-[1] ' src="./src/assets/CS_Triangle_4.webp" alt="Hero Element" />
+{/*         <img loading="lazy" className='md:w-[5rem] absolute z-[1] ' src="./src/assets/CS_Triangle_4.webp" alt="Hero Element" /> */}
         {/* <img loading="lazy" className='md:w-[5rem] blur-lg ' src="./src/assets/CS_Triangle_4.webp" alt="Hero Element" /> */}
       </div>
       <div className='font-[Brigends] relative text-[#fff] px-2 sm:px-5 md:px-10 pb-10 text-[10vw] xl:text-[9vw] font-bold h-full w-full overflow-hidden flex flex-col justify-end items-start'>
