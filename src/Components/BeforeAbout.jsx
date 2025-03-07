@@ -3,7 +3,7 @@ import React from "react";
 const BeforeAbout = () => {
   return (
     <div className="before-about h-[60vh] sm:h-[70vh] md:h-[110vh] w-full flex justify-center items-center relative">
-      <div className="h-fit w-fit text-[9vw] font-[Brigends] uppercase leading-[7vw] tracking-tight flex flex-col justify-center items-center relative">
+      <div className="h-fit w-fit text-[9vw] font-['Brigends] uppercase leading-[7vw] tracking-tight flex flex-col justify-center items-center relative">
         <h1 className="about-h font-[Abuget] gradient-anim text-[15vw] md:text-[10vw] capitalize leading-none text-[#5ef23c] absolute top-[-30%]  md:top-[-20%] z-[1]">
           Crafting
         </h1>
