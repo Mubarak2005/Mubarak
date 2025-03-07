@@ -102,8 +102,8 @@ const Navbar = () => {
             
             <div className={`nav-section h-full text-[#000] bg-[#dedede] font-[Brigends] flex justify-start items-center fixed right-0 top-0 z-[990] ${navBar ? 'p-5' : 'p-0'}  `}>
                 <div className='nav-el h-fit w-fit rotate-img  opacity-[0] scale-[.5] absolute right-40 top-40 z-[992] '>
-                        <img loading="lazy" className='w-[10rem] absolute z-[1] ' src="./src/assets/CS_Star_4.webp" alt="Navbar Element" />
-                        <img loading="lazy" className='w-[10rem] blur-lg ' src="./src/assets/CS_Star_4.webp" alt="Navbar Element" />
+                        <img loading="lazy" className='w-[10rem] absolute z-[1] ' src="/images/CS_Star_4.webp" alt="Navbar Element" />
+                        <img loading="lazy" className='w-[10rem] blur-lg ' src="/images/CS_Star_4.webp" alt="Navbar Element" />
                     </div>
                 <div className={`h-full ${navBar ? 'visible' : 'hidden'} w-full flex flex-col justify-center items-start`}>
                     {/* <h1 className='w-full h-full font-[Abuget] gradient-anim text-[10vw] px-5 text-center'>Menu</h1> */}
