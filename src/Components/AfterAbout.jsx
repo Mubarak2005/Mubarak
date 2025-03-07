@@ -36,7 +36,7 @@ const AfterAbout = () => {
       </div>
       <div className='flex gap-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '>
         <div className='circle-a bg-[#0b0b14] rounded-full p-5 w-[20rem] relative ease-linear transition-all duration-[5] '>
-          <img className='' src="./src/assets/round.png" alt="Round Image" />
+          <img className='' src="/images/round.png" alt="Round Image" />
           <FaArrowDown className='arrow scale-[1] text-6xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ' />
         </div>
       </div>
