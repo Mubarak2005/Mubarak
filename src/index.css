@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {height: 100%;}
+
+@font-face {
+  font-family: 'Brigends';
+  src: url('/Fonts/Brigendsexpanded.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Hanson';
+  src: url('/Fonts/Hanson-Bold.ttf') format('truetype');}
+@font-face {
+  font-family: 'Abuget';
+  src: url('/Fonts/Abuget.ttf') format('truetype'); }
+
+body{background-color: #07070d;}
+
+.infinite-one{
+  animation: text-move 50s linear infinite;
+}
+@keyframes text-move{
+  0%{
+    transform: translateX(0%);
+  }100%{
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-two{
+  animation: text-move2 50s linear infinite;
+}
+@keyframes text-move2{
+  0%{
+    transform: translateX(-50%);
+  }100%{
+    transform: translateX(0%);
+  }
+}
+/* .gradient-animation{
+  font-weight: light;
+  background: linear-gradient(to top, #2A1360 , #fff, #000, #1b998b, #d7263d); 
+  animation: gradient-animation 10s linear infinite;
+  background-size: 200% 200%;
+  filter: contrast(100px) brightness(100px); 
+}
+@keyframes gradient-animation {
+  to {
+    background-position: 200% center;
+  }
+} */
+
+.about-img img{
+  animation: img-rotate linear 10s infinite ;
+}
+.tri-el img{
+  animation: tri-rotate linear 10s infinite ;
+}
+@keyframes tri-rotate {
+  0%{
+    rotate: 0deg;
+  }100%{
+    rotate: -360deg;
+  }
+}
+
+.circle-a img, .rotate-img img{
+  animation: img-rotate linear 10s infinite ;
+}
+
+@keyframes img-rotate {
+  0%{
+    rotate: 0deg;
+  }100%{
+    rotate: 360deg;
+  }
+}
+
+.gradient-anim{
+  font-weight:light;
+  background: linear-gradient(to right, #d7263d , #f46036, #3522af, #04ecd1, #d7263d); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-clip: text;
+  animation: gradient-animation 10s linear infinite;
+}
+.gradient-anim2{
+  font-weight:light;
+  background: linear-gradient(to right, #3522af , #f46036, #d7263d, #04ecd1, #3522af); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-clip: text;
+  animation: gradient-animation 10s linear infinite;
+}
+@keyframes gradient-animation {
+  to{
+      background-position: 200%;
+  }
+}
