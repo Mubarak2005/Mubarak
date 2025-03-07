@@ -101,7 +101,7 @@ const Navbar = () => {
             </div>
             
             <div className={`nav-section h-full text-[#000] bg-[#dedede] font-[Brigends] flex justify-start items-center fixed right-0 top-0 z-[990] ${navBar ? 'p-5' : 'p-0'}  `}>
-                <div className='nav-el h-fit w-fit rotate-img  opacity-[0] scale-[.5] absolute right-40 top-40 z-[992] '>
+                <div className='nav-el h-fit w-fit rotate-img  opacity-[0] scale-[.5] absolute right-10 sm:right-20 md:right-40 top-40 z-[992] '>
                         <img loading="lazy" className='w-[10rem] absolute z-[1] ' src="/images/CS_Star_4.webp" alt="Navbar Element" />
                         <img loading="lazy" className='w-[10rem] blur-lg ' src="/images/CS_Star_4.webp" alt="Navbar Element" />
                     </div>
