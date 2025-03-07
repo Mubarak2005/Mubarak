@@ -17,13 +17,13 @@ const BeforeAbout = () => {
       </div>
       
       <div className="h-fit w-fit absolute left-2 md:left-10 bottom-20 md:top-1/2 rotate-img ">
-        <img loading="lazy" className="w-[15vw] lg:w-[10vw] drop-shadow-2xl " src={require("./src/assets/Mask group-9.webp")} alt="Before About Element" />
+        <img loading="lazy" className="w-[15vw] lg:w-[10vw] drop-shadow-2xl " src="./src/assets/Mask group-9.webp" alt="Before About Element" />
       </div>
       {/* <div className="h-fit w-fit absolute left-2 md:left-10 bottom-20 md:top-1/2 rotate-img ">
         <img loading="lazy" className="w-[15vw] lg:w-[10vw] blur-sm drop-shadow-2xl " src="./src/assets/Mask group-9.webp" alt="Before About Element" />
       </div> */}
       <div className="h-fit w-fit drop-shadow-2xl absolute top-32 right-14 rotate-img ">
-        <img loading="lazy" className="w-[15vw] lg:w-[10vw] drop-shadow-2xl " src={require("./src/assets/Mask group-6.webp")} alt="Before About Element" />
+        <img loading="lazy" className="w-[15vw] lg:w-[10vw] drop-shadow-2xl " src="./src/assets/Mask group-6.webp" alt="Before About Element" />
       </div>
       {/* <div className="h-fit w-fit drop-shadow-2xl absolute top-32 right-14 rotate-img ">
         <img loading="lazy" className="w-[15vw] lg:w-[10vw] blur-md drop-shadow-2xl " src="./src/assets/Mask group-6.webp" alt="Before About Element" />
