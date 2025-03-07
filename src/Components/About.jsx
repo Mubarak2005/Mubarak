@@ -56,7 +56,7 @@ const About = () => {
             </div>
             <div className='h-[70%] about-img border-[.5px] border-[#9d9dea5e] rounded-2xl w-full hidden md:flex justify-center items-center relative z-[1] '>
               {/* <img className='w-[90%] absolute blur-md' src="./src/assets/CS_Star_13.webp" alt="About Element" /> */}
-              <img className='w-[90%] absolute backdrop-contrast-200 backdrop-brightness-200 ' src="./src/assets/CS_Star_13.webp" alt="About Element" />
+              <img className='w-[90%] absolute backdrop-contrast-200 backdrop-brightness-200 ' src="/images/CS_Star_13.webp" alt="About Element" />
             </div>
           </div>
 
@@ -66,7 +66,7 @@ const About = () => {
             </h1>
             {['top-2 right-2', 'top-2 left-2', 'bottom-2 right-2', 'bottom-2 left-2'].map(position => (
               <div key={position} className={`h-fit w-fit drop-shadow-2xl absolute ${position} rotate-img`}>
-                <img className="w-8" src="./src/assets/Mask group-8.webp" alt="About Element" />
+                <img className="w-8" src="/images/Mask group-8.webp" alt="About Element" />
               </div>
             ))}
           </div>
