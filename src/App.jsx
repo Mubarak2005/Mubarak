@@ -37,7 +37,7 @@ const App = () => {
     <div>
       <Navbar />
       <div className='main h-full w-full text-[#fff]'>
-        {/* <Loading /> */}
+        <Loading />
         <Home />
         <BeforeAbout />
         <InfiniteScroller />
