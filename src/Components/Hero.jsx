@@ -34,7 +34,7 @@ const Hero = () => {
     });
 
     gsap.from(".hero-txt span", {
-      delay: 5,
+      delay: 4.5,
       y: "100%",
       stagger: .02,
       ease: "expo.out",
@@ -59,9 +59,14 @@ const Hero = () => {
       ease: "expo",
     });
     gsap.to(".video-div", {
-      delay: 6,
+      delay: 5,
       opacity: 1,
-      scale: 1,
+      scale: .9,
+      filter: "blur(0px)",
+    });
+    gsap.to(".hero-time", {
+      delay: 5,
+      opacity: 1,
       filter: "blur(0px)",
     });
   }, []);
@@ -101,7 +106,7 @@ const Hero = () => {
 
   return (
     <div className="hero w-full h-full relative ">
-      <div className='rotate-im video-di opacity-[1] scale-[.9] pointer-events-none blur-[0px] object-cover backdrop-blur-md overflow-hidden absolute right-10 top-10 z-[1] border-[1px] border-[#ffffff51] h-[50vh] w-[50vw] rounded-full'>
+      <div className='rotate-im video-div opacity-[0] scale-[.7] pointer-events-none blur-[10px] object-cover backdrop-blur-md overflow-hidden absolute right-10 top-10 z-[1] border-[1px] border-[#ffffff51] h-[50vh] w-[50vw] rounded-full'>
         <img loading="lazy" className='absolute inset-0 h-full w-full opacity-[.8]  object-cover z-[1]' src="https://framerusercontent.com/images/mV2zBXGKyt2VhbXmEN44WmZK9nA.jpg" alt="Hero Element" />
       </div>
       {/* <img loading="lazy" className='md:w-[15rem] blur-lg ' src="./src/assets/CS_Flower_7.webp" alt="Hero Element" /> */}
@@ -109,8 +114,8 @@ const Hero = () => {
         <img loading="lazy" className='md:w-[5rem] absolute z-[1] ' src="./src/assets/CS_Triangle_4.webp" alt="Hero Element" />
         {/* <img loading="lazy" className='md:w-[5rem] blur-lg ' src="./src/assets/CS_Triangle_4.webp" alt="Hero Element" /> */}
       </div>
-      <div className='font-["Brigends"] relative text-[#fff] px-2 sm:px-5 md:px-10 pb-10 text-[10vw] xl:text-[9vw] font-bold h-full w-full overflow-hidden flex flex-col justify-end items-start'>
-        <div className='hero-time'>
+      <div className='font-[Brigends] relative text-[#fff] px-2 sm:px-5 md:px-10 pb-10 text-[10vw] xl:text-[9vw] font-bold h-full w-full overflow-hidden flex flex-col justify-end items-start'>
+        <div className='hero-time blur-[10px] opacity-0 '>
           <h1 className='text-[4vw] opacity-[1] md:text-[2vw] font-[Hanson] leading-10'>{currentDateTime.toLocaleTimeString()}</h1>
         </div>
         <div className='hero-txt w-fit h-fit overflow-hidden tracking-wide pointer-events-auto leading-none md:leading-[8vw] uppercase pl-1 flex'><h1 className='flex'>Creative</h1></div>
