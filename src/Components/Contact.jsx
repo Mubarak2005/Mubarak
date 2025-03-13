@@ -53,10 +53,10 @@ const Contact = () => {
 
       <div className='w-full flex flex-col justify-center items-center'>
         <h1 className='text-[5vw] md:text-2xl font-extralight'>
-          Contact at <span className='text-blue-500 font-medium'>mubarak54862@gmail.com</span>
+          Contact at <span className='text-blue-500 font-medium'><a href="mailto:mubarak54862@gmail.com">mubarak54862@gmail.com</a></span>
         </h1>
-        <h1 className='text-[5vw] md:text-2xl font-extralight'>
-           <span className='text-blue-500 font-medium'>+91 9725569168</span>
+        <h1 className='text-[5vw] md:text-2xl font-extralight mt-2'>
+           <span className='text-blue-500 font-medium'><a href="tel:+919725569168">+91 9725569168</a></span>
         </h1>
       </div>
 
