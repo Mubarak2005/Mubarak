@@ -51,18 +51,19 @@ const Contact = () => {
         <h1 ref={contactTextRef} className='contact-text font-[Hanson] flex overflow-hidden'>Let's talk!</h1>
       </div>
 
-      {/* Social Links */}
-      <div className='flex gap-20 justify-between pb-5 text-5xl border-b-[1px] border-[#9d9dea5e] w-2/3 '>
+      <div className='w-full flex flex-col justify-center items-center'>
+        <h1 className='text-[5vw] md:text-2xl font-extralight'>
+          Contact at <span className='text-blue-500 font-medium'>mubarak54862@gmail.com</span>
+        </h1>
+        <h1 className='text-[5vw] md:text-2xl font-extralight'>
+           <span className='text-blue-500 font-medium'>+91 9725569168</span>
+        </h1>
+      </div>
+
+      <div className='flex justify-between pb-5 text-4xl w-[50%] md:w-[20%] '>
         <FaLinkedin className='cursor-pointer duration-200 hover:text-[#0073B1] transition-all' />
         <FaGithub className='cursor-pointer duration-200 transition-all' />
         <FaDiscord className='cursor-pointer duration-200 hover:text-[#5562EA] transition-all' />
-      </div>
-
-      {/* Contact Email */}
-      <div className='w-full flex justify-center'>
-        <h1 className='text-[4vw] md:text-2xl font-extralight'>
-          Contact at <span className='text-blue-500 font-medium'>mubarak54862@gmail.com</span>
-        </h1>
       </div>
 
       {/* Decorative Image */}
