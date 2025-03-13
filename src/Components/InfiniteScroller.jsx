@@ -1,32 +1,6 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const InfiniteScroller = () => {
-  useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger); 
-    // const tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".infinite-main",
-    //     scroller: "body",
-    //     start: "top bottom",
-    //     end: "bottom top",
-    //     markers: true, // Set markers to false for cleaner output
-    //     scrub: 0.5 // Adjusted scrub value for smoother animation
-    //   }
-    // });
-
-    // tl.to(".infinite-one", {
-    //   x:"20%", // Ensure proper GSAP usage
-    //   duration: 1 // Added duration for the animation
-    // })
-    // .to(".infinite-two", {
-    //   x: "20%", // Ensure proper GSAP usage
-    //   duration: 1 // Added duration for the animation
-    // }, "<"); // Use "<" to synchronize the animations
-
-  }, []);
-
   return (
     <div className='infinite-main flex flex-col justify-center items-center gap-40'>
       <div className='w-full font-[Hanson] flex gap-5 flex-col items-start justify-center overflow-hidden'>
