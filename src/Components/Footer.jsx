@@ -1,77 +1,30 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa6";
+import React from 'react'
 
-const Contact = () => {
-  const contactTextRef = useRef(null); // Ref for the contact text
-
-  useEffect(() => {
-    const textElement = contactTextRef.current;
-    if (!textElement) return;
-
-    const text = textElement.innerText.split(""); // Split text into letters
-    textElement.innerHTML = ""; // Clear existing text
-
-    // Create spans for each letter
-    text.forEach(letter => {
-      const span = document.createElement('span');
-      span.innerHTML = letter === " " ? "&nbsp;" : letter; // Preserve spaces
-      textElement.appendChild(span);
-    });
-
-    // GSAP Animation
-    gsap.fromTo(textElement.children, {
-      y: "100%"
-    }, {
-      y: "0%",
-      duration: 0.5,
-      stagger: 0.03,
-      ease: "expo.out",
-      scrollTrigger: {
-        trigger: ".contact",
-        scroller: "body",
-        start: "top 60%",
-        end: "top 60%",
-      },
-      onComplete: function(){
-        gsap.to(".contact-img",{
-          opacity: 1,
-          filter: "blur(0px)",
-          scale: 1
-        })
-      }
-    });
-
-  }, []);
-
+const Footer = () => {
   return (
-    <div className='contact h-[50vh] xl:h-[70vh] 2xl:h-[100vh] leading-[1] w-full flex flex-col gap-10 justify-center items-center relative'>
-      {/* Animated Text */}
-      <div className='relative text-[10vw] pointer-events-none'>
-        <h1 ref={contactTextRef} className='contact-text font-[Hanson] flex overflow-hidden'>Let's talk!</h1>
+    <div className='w-full relative px-5 md:px-10 '>
+      <div className='w-full font-[Hanson] flex flex-col md:flex-row gap-10 '>
+        <div className='w-full md:w-1/2 h-1/2 md:h-full relative'>
+          <div className="h-fit w-fit drop-shadow-2xl absolute -top-10 md:top-20 left-0 md:left-20 rotate-img ">
+            <img className="w-20" src="/images/Mask group-12.webp" alt="Footer Element" />
+          </div>
+          {/* <h1 className='text-[5vw] leading-none gradient-anim2 font-[Abuget] px-4'>Mubarak Ansari</h1> */}
+          <h1 className='text-[10vw] md:text-[5vw] leading-[1vw] font-[Brigends] text-center '><span className='font-[Abuget] px-3 text-[15vw] md:text-[10vw] gradient-anim leading-none relative z-[1] '>Mubarak</span> Ansari</h1>
+        </div>
+        <div className='w-full md:w-1/2 h-1/2 md:h-full text-[5vw] md:text-[2.3vw] flex flex-row md:flex-col justify-between md:justify-start items-center md:gap-5 border-t-[1px] md:border-l-[1px] md:border-t-[0px] border-[#9d9dea5e] '>
+          <h1 className='w-full text-[7vw] md:text-[2.5vw] mt-5 leading-none text-center'>Quick Links</h1>
+          <div className='w-full flex flex-col justify-center items-center mt-5'>
+            <h2>Home</h2>
+            <h2>About</h2>
+            <h2>Projects</h2>
+          </div>
+        </div>
       </div>
-
-      <div className='w-full flex flex-col justify-center items-center'>
-        <h1 className='text-[5vw] md:text-2xl font-extralight'>
-          Contact at <span className='text-blue-500 font-medium'>mubarak54862@gmail.com</span>
-        </h1>
-        <h1 className='text-[5vw] md:text-2xl font-extralight'>
-           <span className='text-blue-500 font-medium'>+91 9725569168</span>
-        </h1>
-      </div>
-
-      <div className='flex justify-between pb-5 text-4xl w-[50%] md:w-[20%] '>
-        <FaLinkedin className='cursor-pointer duration-200 hover:text-[#0073B1] transition-all' />
-        <FaGithub className='cursor-pointer duration-200 transition-all' />
-        <FaDiscord className='cursor-pointer duration-200 hover:text-[#5562EA] transition-all' />
-      </div>
-
-      {/* Decorative Image */}
-      <div className="contact-img blur-[10px] scale-[.7] opacity-[0] h-fit w-fit drop-shadow-2xl absolute top-10 sm:top-0 xl:top-36 right-10 md:right-36 rotate-img">
-        <img className="w-[15vw] md:w-[10vw] " src="/images/Mask group-4.webp" alt="Contact Element" />
+      <div className='w-full py-5 mt-10 border-t-[1px] border-[#9d9dea5e] '>
+        <h1 className='text-center text-[3vw] md:text-[1vw] '>&copy; {new Date().getFullYear()} Mubarak Ansari. All rights reserved.</h1>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Footer
