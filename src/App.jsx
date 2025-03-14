@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div>
-      <Loading lenis={lenis} /> {/* Pass Lenis to Loading Component */}
+      <Loading lenis={lenis} /> 
       <Navbar lenis={lenis}  />
       <div className='main h-full w-full text-[#fff]'>
         <Home />
