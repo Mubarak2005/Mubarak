@@ -56,7 +56,7 @@ const About = () => {
   }, []);
   
   return (
-    <div className='about h-[200vh] w-full relative md:mt-20 '>
+    <div id='about' className='about h-[200vh] w-full relative md:mt-20 '>
       <div className='about2 h-screen w-full sticky top-0 left-0 p-3 md:p-10 flex justify-center items-center '>
         <div className='w-[100vw] h-full font-[Brigends] flex flex-col md:flex-row justify-end gap-5 overflow-hidden relative text-[#dedede] '>
           <div className='h-[30%] w-full md:h-full md:w-[30%] flex flex-col gap-5 justify-start items-center '>
