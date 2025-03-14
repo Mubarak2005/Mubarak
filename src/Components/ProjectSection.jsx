@@ -51,7 +51,7 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <div className="projects w-full relative">
+    <div id='projects' className="projects w-full relative">
       <ProjectText />
           <div className='project-in mt-20 h-full w-full flex flex-col z-10 overflow-hidden relative font-[Hanson]'>
             <div className="project-img1 h-fit w-fit drop-shadow-2xl absolute top-[30%] left-14 ">
