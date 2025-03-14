@@ -1,8 +1,13 @@
 import React from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const Footer = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "auto", block: "start" }); // "auto" makes it instant
+    }
+  };
   return (
     <div className='w-full relative px-5 md:px-10 '>
       <div className='w-full font-[Hanson] flex flex-col md:flex-row gap-10 '>
@@ -17,13 +22,13 @@ const Footer = () => {
           <h1 className='w-full text-[7vw] md:text-[2.6vw] mt-5 leading-none text-center'>Quick Links</h1>
           <div className='w-full flex flex-col justify-center items-center mt-5'>
             <h2 className='cursor-pointer hover:underline'>
-              <Link className='flex items-center' to="home" smooth={false} duration={500} spy={true} offset={-70}>Home</Link>
+              <span onClick={() => scrollToSection("home")} className='flex items-center'>Home</span>
             </h2>
             <h2 className='cursor-pointer hover:underline'>
-              <Link className='flex items-center' to="about" smooth={false} duration={500} spy={true} offset={-70}>About</Link>
+              <span onClick={() => scrollToSection("about")} className='flex items-center'>About</span>
             </h2>
             <h2 className='cursor-pointer hover:underline'>
-              <Link className='flex items-center' to="projects" smooth={false} duration={500} spy={true} offset={-70}>Projects</Link>
+              <span onClick={() => scrollToSection("projects")} className='flex items-center'>Projects</span>
             </h2>
           </div>
         </div>
@@ -33,6 +38,7 @@ const Footer = () => {
       </div>
     </div>
   )
+  
 }
 
 export default Footer
