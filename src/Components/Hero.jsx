@@ -33,7 +33,7 @@ const Hero = () => {
     });
 
     gsap.from(".hero-txt span", {
-      // delay: 4.5,
+      delay: 6.4,
       y: "100%",
       stagger: .02,
       ease: "expo.out",
@@ -47,24 +47,24 @@ const Hero = () => {
       onStart: function() {
         gsap.set(".h-bottom", { opacity: 1 });
       },
-      delay: .5,
+      delay: 6.4,
       width: "100%",
       ease: "expo.out",
     });
     gsap.to(".h-bottom h1", {
-      delay: .5,
+      delay: 6.4,
       opacity: 1.5,
       filter: "blur(0px)",
       ease: "expo",
     });
     gsap.to(".video-div", {
-      delay: .5,
+      delay: 6.4,
       opacity: 1,
       scale: .9,
       filter: "blur(0px)",
     });
     gsap.to(".hero-time", {
-      delay: .5,
+      delay: 6.4,
       opacity: 1,
       filter: "blur(0px)",
     });
