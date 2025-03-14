@@ -43,7 +43,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className='contact-me h-[50vh] xl:h-[90vh] leading-[1] w-full flex flex-col gap-10 justify-center items-center relative'>
+    <div id='contact-me' className='contact-me h-[50vh] xl:h-[90vh] leading-[1] w-full flex flex-col gap-10 justify-center items-center relative'>
       <div className='relative text-[10vw] pointer-events-none'>
         <h1 ref={contactTextRef} className='contact-text font-[Hanson] flex overflow-hidden'>Let's talk!</h1>
       </div>
