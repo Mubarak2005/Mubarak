@@ -4,7 +4,7 @@ import Hero from './Hero'
 
 const Home = () => {
   return (
-    <div name="home">
+    <div id='home' name="home">
         <div className="h-screen flex justify-center items-center">
           <Hero />
         </div>
