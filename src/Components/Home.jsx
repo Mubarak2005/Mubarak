@@ -1,12 +1,15 @@
 import React from 'react'
 import Hero from './Hero'
+import { Element } from 'react-scroll'
 
 
 const Home = () => {
   return (
-    <div className='home h-screen w-full relative'>
-      <Hero />
-    </div>
+    <Element name="home">
+        <section className="h-screen flex justify-center items-center">
+          <Hero />
+        </section>
+      </Element>
   )
 }
 
