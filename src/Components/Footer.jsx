@@ -1,6 +1,6 @@
 import React from 'react'
-import { MdArrowOutward } from 'react-icons/md'
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const Footer = () => {
   return (
