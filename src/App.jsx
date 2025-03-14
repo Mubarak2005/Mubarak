@@ -38,7 +38,7 @@ const App = () => {
     <div>
       <Loading lenis={lenis} /> {/* Pass Lenis to Loading Component */}
       <Navbar lenis={lenis}  />
-      <div className='main h-full w-full text-[#fff] mix-blend-difference'>
+      <div className='main h-full w-full text-[#fff]'>
         <Home />
         <BeforeAbout />
         <InfiniteScroller />
