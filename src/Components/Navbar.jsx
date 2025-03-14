@@ -2,7 +2,6 @@ import gsap from 'gsap';
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import { Link } from 'react-scroll';
 
 const Navbar = ({lenis}) => {
 
@@ -74,6 +73,14 @@ const Navbar = ({lenis}) => {
         setNavBar(prev => !prev);
     };
 
+    const scrollToSection = (id, setNavBar) => {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "auto", block: "start" }); // Instant scroll
+          setNavBar(false); // Close the navbar if needed
+        }
+      };
+
     return (
         <>
             <div className={`navbar-l opacity-0 blur-[10px] fixed font-[Azonix] text-[#fff] z-[991] top-5 w-full flex justify-between items-center px-3 md:px-10 mix-blend-difference`}>
@@ -100,15 +107,18 @@ const Navbar = ({lenis}) => {
                         {['Home', 'About', 'Projects', 'Contact Me'].map((item, index) => {
                             const sectionId = item.toLowerCase().replace(/\s+/g, "-"); // Convert to lowercase & replace spaces
                             return (
-                                <div key={index} className='w-full border-b-[1px] border-[#000] relative overflow-hidden'>
-                                    <h1 className='nav-h1 w-fit md:px-5 relative group hover:cursor-pointer flex items-center md:gap-2'>
-                                        <Link className='flex items-center' to={sectionId} smooth={false} duration={500} spy={true} offset={-70} onClick={() => setNavBar(false)} >
-                                        <MdArrowOutward className='hidden xl:block md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300' />{item}</Link>
-                                        <span className='text-[10vw] md:text-[4vw] pointer-events-none opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[Abuget] gradient-anim2 duration-500 group-hover:opacity-100'>{item}</span>
-                                    </h1>
-                                </div>
-                            );
-                        })}
+                            <div key={index} className='w-full border-b-[1px] border-[#000] relative overflow-hidden'>
+                                <h1 className='nav-h1 w-fit md:px-5 relative group hover:cursor-pointer flex items-center md:gap-2'
+                                    onClick={() => scrollToSection(sectionId, setNavBar)}>
+                                    <MdArrowOutward className='hidden xl:block md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300' />
+                                    {item}
+                                    <span className='text-[10vw] md:text-[4vw] pointer-events-none opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[Abuget] gradient-anim2 duration-500 group-hover:opacity-100'>
+                                    {item}
+                                    </span>
+                                </h1>   
+                            </div>
+                        );
+                    })}
                     </div>
                     <div className='w-full h-full text-[10vw] md:text-[2vw] flex justify-center items-center gap-20'>
                         <a className='p-4 border-[.5px] border-[#000000b0] rounded-full ' href="https://www.linkedin.com/in/mubarak-ansari-4a6312264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
