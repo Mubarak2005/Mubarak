@@ -120,7 +120,7 @@ const Navbar = ({lenis}) => {
                         );
                     })}
                     </div>
-                    <div className='w-full h-full text-[10vw] md:text-[2vw] flex justify-center items-center gap-20'>
+                    <div className='w-full h-full text-[6vw] md:text-[2vw] flex justify-center items-center gap-10 md:gap-20'>
                         <a className='p-4 border-[.5px] border-[#000000b0] rounded-full ' href="https://www.linkedin.com/in/mubarak-ansari-4a6312264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className='cursor-pointer' />
                         </a>
