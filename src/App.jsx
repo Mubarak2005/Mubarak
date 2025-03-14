@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import About from './Components/About';
 import Home from './Components/Home';
 import ProjectSection from './Components/ProjectSection';
@@ -8,32 +8,36 @@ import InfiniteScroller from './Components/InfiniteScroller';
 import Footer from './Components/Footer';
 import Lenis from "@studio-freight/lenis";
 import Navbar from './Components/Navbar';
+import Loading from './Components/Loading';
 
 const App = () => {
-  
+  const [lenis, setLenis] = useState(null);
+
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.5, // Smoother scrolling experience
+    const lenisInstance = new Lenis({
       smooth: true,
-      smoothTouch: true, // Enables smooth scrolling on touch devices
-      easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for a natural feel
+      smoothTouch: true, 
+      easing: (t) => 1 - Math.pow(1 - t, 3), 
     });
 
+    setLenis(lenisInstance);
+
     const update = (time) => {
-      lenis.raf(time);
+      lenisInstance.raf(time);
       requestAnimationFrame(update);
     };
 
     requestAnimationFrame(update);
 
     return () => {
-      lenis.destroy(); // Cleanup on unmount
+      lenisInstance.destroy();
     };
   }, []);
 
   return (
     <div>
-      <Navbar />
+      <Loading lenis={lenis} /> {/* Pass Lenis to Loading Component */}
+      <Navbar lenis={lenis}  />
       <div className='main h-full w-full text-[#fff] mix-blend-difference'>
         <Home />
         <BeforeAbout />
