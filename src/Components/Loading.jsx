@@ -1,73 +1,54 @@
-import gsap, { Expo } from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
 
-const Loading = () => {
-    const textRef = useRef(null);
-
+const Loading = ({ lenis }) => {
     useEffect(() => {
-        document.querySelector("body").style.overflow = "hidden";
-        if (!textRef.current) return;
-        
-        const textContainer = textRef.current;
-        const letters = textContainer.innerText.split("");
-        textContainer.innerHTML = "";
-
-        letters.forEach((letter) => {
-            const span = document.createElement("span");
-            span.innerHTML = letter;
-            textContainer.appendChild(span);
-        });
+        if (!lenis) return; // Ensure lenis is defined before using it
 
         const tl = gsap.timeline();
-        tl.from(".loading-m2 span", { y: "100%", stagger: 0.02, delay: 0.4, ease: Expo.easeOut });
-
-        const loadingAnimation = window.innerWidth <= 751 ? {
-            scale: 150,
-            y: -800,
-            x: -400,
-        } : {
-            scale: 100,
-            y: -1000,
-            x: -400,
-            background: "#0b0b14",
-        };
-
-        tl.to(".loading-m1", {
-            delay: 3,
-            ...loadingAnimation,
+        document.body.style.overflow = "hidden"; // Disable scrolling
+        lenis.stop(); // Stop Lenis during loading
+        
+        tl.fromTo(".load-text span",
+            { opacity: 0 },
+            { opacity: 1, stagger: 0.1, delay: 0.3, duration: 0.8, ease: "power2.out" }
+        ).to(".load-text span", {
+            filter: "blur(5px)",
+            opacity: 0,
+            duration: 0.5,
+            delay: 2,
+            ease: "power2.out",
+            stagger: 0.1,
+        }).to(".loading-section", {
+            opacity: 0,
+            visibility: "hidden", // Use visibility instead of display: none
+            duration: 0.3,
             onComplete: () => {
-                document.querySelector(".loading-section").style.display = "none";
-                document.querySelector("body").style.overflow = "visible"
+                document.body.style.overflow = "visible"; // Re-enable scrolling
+                lenis.start(); // Restart Lenis after animation
             }
         });
 
-        let grow = 0;
-        const h5timer = document.querySelector(".loading-per");
-        const interval = setInterval(() => {
-            if (grow <= 100) {
-                h5timer.innerHTML = grow++;
-            }
-            gsap.to(".loading-per-all", { left: "0%", duration: 3 });
-        }, 25);
-
-        return () => clearInterval(interval); // Cleanup interval on unmount
-
-    }, []);
+        return () => {
+            tl.kill(); // Cleanup GSAP animations
+        };
+    }, [lenis]); // Dependency array includes lenis
 
     return (
-        <div className='loading-section h-screen w-full p-10 text-[#07070d] fixed top-0 left-0 z-[999] flex justify-center items-center bg-[#e2e2e2] overflow-hidden'>
-            <div className='loading-m1 font-[Brigends] text-3xl md:text-6xl overflow-hidden'>
-                <h1 className='loading-m2 flex' ref={textRef}>Mubarak</h1>
-            </div>
-            <div className="loading-per-all ease-linear font-[Hanson] text-5xl md:text-9xl flex justify-between items-center absolute bottom-10 right-0">
-                <div className='flex'>
-                    <h1 className="loading-per">0</h1>
-                    <span>%</span>
-                </div>
-                <div className='w-full flex justify-center items-center'>
-                    <h1 className='h-[1px] w-full bg-[#07070d]'></h1>
-                </div>
-            </div>
+        <div className='loading-section h-screen w-full p-10 text-[#fff] fixed top-0 left-0 z-[999] flex justify-center items-center bg-[#07070d] overflow-hidden'>
+            <h1 className='load-text text-[3vw] md:text-[1.2vw] '>
+                <span className='text-orange-400'>n</span>
+                <span className='text-orange-400'>p</span>
+                <span className='text-orange-400'>m</span>
+                <span> </span>
+                <span>r</span>
+                <span>u</span>
+                <span>n</span>
+                <span> </span>
+                <span>d</span>
+                <span>e</span>
+                <span>v</span>
+            </h1>
         </div>
     );
 };
