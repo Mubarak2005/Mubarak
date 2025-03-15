@@ -16,7 +16,7 @@ const Footer = () => {
             <img className="w-20" src="/images/Mask group-12.webp" alt="Footer Element" />
           </div>
           {/* <h1 className='text-[5vw] leading-none gradient-anim2 font-[Abuget] px-4'>Mubarak Ansari</h1> */}
-          <h1 className='text-[10vw] md:text-[5vw] leading-[1vw] font-[Brigends] text-center '><span className='font-[Abuget] px-3 text-[15vw] md:text-[10vw] gradient-anim leading-none relative z-[1] '>Mubarak</span> Ansari</h1>
+          <h1 className='text-[10vw] md:text-[5vw] leading-[1vw] font-[Brigends] text-center '><span className='font-[Abuget] px-3 text-[15vw] md:text-[10vw] text-[#ef3750] leading-none relative z-[1] '>Mubarak</span> Ansari</h1>
         </div>
         <div className='w-full md:w-1/2 h-1/2 md:h-full text-[5vw] md:text-[2vw] flex flex-row md:flex-col justify-between md:justify-start items-center md:gap-5 border-t-[1px] md:border-l-[1px] md:border-t-[0px] border-[#9d9dea5e] '>
           <h1 className='w-full text-[7vw] md:text-[2.6vw] mt-5 leading-none text-center'>Quick Links</h1>
