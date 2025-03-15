@@ -6,14 +6,14 @@ html, body {height: 100%;}
 
 @font-face {
   font-family: 'Brigends';
-  src: url('./Fonts/brigendsexpanded.otf') format('opentype');
+  src: url('/Fonts/brigendsexpanded.otf') format('opentype');
 }
 @font-face {
   font-family: 'Hanson';
   src: url('/Fonts/Hanson-Bold.ttf') format('truetype');}
 @font-face {
   font-family: 'Abuget';
-  src: url('./Fonts/Abuget.ttf') format('truetype'); }
+  src: url('/Fonts/Abuget.ttf') format('truetype'); }
 
 body{background-color: #07070d;}
 
