@@ -1,63 +1,89 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import React, { useEffect } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from 'react';
 
-const BeforeAbout = () => {
-  gsap.registerPlugin(ScrollTrigger);
+const About = () => {
+  
   useEffect(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".before-about",
-        start: "top bottom",
-        end: "bottom top",
-        scroller: "body",
-        scrub: .2
-      },
-    });
-    timeline.to(".about-img1", {
-      rotation: -180,
-      ease: "power1.inOut" 
-    },'a');
-    timeline.to(".about-img2", {
-      y:-50,
-      rotation: 180,
-      ease: "power1.inOut" 
-    },'a');
-    timeline.to(".about-cur", {
-      y:"-10%",
-      // rotation: 180,
-      ease: "power1.inOut" 
-    },'a');
-  }, []);
-  return (
-    <div className="before-about h-[60vh] sm:h-[70vh] md:h-[110vh] w-full flex justify-center items-center relative">
-      <div className="h-fit w-fit text-[9vw] font-[Brigends] uppercase leading-[7vw] tracking-tight flex flex-col justify-center items-center relative">
-        <h1 className="about-cur about-h font-[Abuget] radient-anim text-[20vw] sm:text-[17vw] md:text-[14vw] xl:text-[11vw] capitalize leading-none text-[#ef3750] absolute top-[-35%]  md:top-[-20%] z-[1]">
-          Crafting
-        </h1>
-        <h1 className="expr">Interactive </h1>
-        <h1 className="expr mb-3">and</h1>
-        <h1 className="about-cur font-[Abuget] radient-anim2 mt-7 p-3 text-[20vw] sm:text-[17vw] md:text-[14vw] xl:text-[11vw] capitalize leading-none text-[#ef3750] absolute z-[1]">
-          Modern
-        </h1>
-        <h1 className="expr mt-7 md:mt-12 ">Web</h1>
-        <h1 className="expr">Experiences</h1>
-      </div>
+    gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+  
+    const textContainer = document.querySelector(".about-text");
+    if (!textContainer) return; // Safeguard in case the element is not found
+  
+    const words = textContainer.innerText.split(' ');
+    textContainer.innerHTML = '';
+  
+    words.forEach(word => {
+      let span = document.createElement('span');
+      span.textContent = word + ' ';
       
-      <div className="about-img1 h-fit w-fit absolute left-2 md:left-10 bottom-20 md:top-1/2 ">
-        <img loading="lazy" className="w-[15vw] lg:w-[10vw] drop-shadow-2xl " src="/images/Mask group-9.webp" alt="Before About Element" />
-      </div>
-      {/* <div className="h-fit w-fit absolute left-2 md:left-10 bottom-20 md:top-1/2 rotate-img ">
-        <img loading="lazy" className="w-[15vw] lg:w-[10vw] blur-sm drop-shadow-2xl " src="/images/Mask group-9.webp" alt="Before About Element" />
-      </div> */}
-      <div className="about-img2 h-fit w-fit drop-shadow-2xl absolute top-32 right-14 ">
-        <img loading="lazy" className="w-[15vw] lg:w-[10vw] drop-shadow-2xl " src="/images/Mask group-6.webp" alt="Before About Element" />
-      </div>
-      {/* <div className="h-fit w-fit drop-shadow-2xl absolute top-32 right-14 rotate-img ">
-        <img loading="lazy" className="w-[15vw] lg:w-[10vw] blur-md drop-shadow-2xl " src="/images/Mask group-6.webp" alt="Before About Element" />
-      </div> */}
-    </div>
-  );
-};
+      // Add appropriate class based on the word
+      if (['MUBARAK', 'FRONT-END', 'PASSIONATE', 'SMOOTH', 'ENGAGING'].includes(word)) {
+        span.classList.add('text-[#3989E1]', 'font-[Abuget]');
+      } else if (word === 'INTERACTIONS.') {
+        span.classList.add('underline');
+      }
+      
+      textContainer.appendChild(span);
+    });
+  
+    // GSAP animation with ScrollTrigger
+    gsap.fromTo(
+      ".about-text span",
+      { opacity: 0, filter: "blur(10px)" },
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: ".about2",
+          start: "top top",
+          end: "bottom top", 
+          scrub: true,
+          toggleActions: "play none none reset",
+        }
+      });
+      gsap.to(".about-i",
+        {rotation: 380,
+          scrollTrigger: {
+            trigger: ".about2",
+            start: "top top",
+            end: "bottom top", 
+            scrub: true,
+            toggleActions: "play none none reset",
+          }
+        });
+  }, []);
+  
+  return (
+    <div id='about' className='about h-[200vh] w-full relative md:mt-20 '>
+      <div className='about2 h-screen w-full sticky top-0 left-0 p-3 md:p-10 flex justify-center items-center '>
+        <div className='w-[100vw] h-full font-[Brigends] flex flex-col md:flex-row justify-end gap-5 overflow-hidden relative text-[#dedede] '>
+          <div className='h-[30%] w-full md:h-full md:w-[30%] flex flex-col gap-5 justify-start items-center '>
+            <div className='h-full w-full md:h-[30%] md:w-full border-[.5px] border-[#9d9dea5e] rounded-2xl flex justify-center items-center relative '>
+              <h1 className='text-[12vw] md:text-[4.5vw] xl:text-[5vw] font-[Brigends] '>About</h1>
+              <span className='about-h p-4 text-[20vw] md:text-[10vw] font-[Abuget] absolute text-[#ef3750] '>Me</span>
+            </div>
+            <div className='h-[70%] border-[.5px] border-[#9d9dea5e] rounded-2xl w-full hidden md:flex justify-center items-center relative z-[1] '>
+              {/* <img className='w-[90%] absolute blur-md' src="/images/CS_Star_13.webp" alt="About Element" /> */}
+              <img className='about-i w-[90%] rotate-12 absolute backdrop-contrast-200 backdrop-brightness-200 ' src="/images/CS_Star_13.webp" alt="About Element" />
+            </div>
+          </div>
 
-export default BeforeAbout;
+          <div className='h-[60%] w-full md:w-[70%] md:h-full relative flex justify-center items-center border-[.5px] border-[#9d9dea5e] rounded-2xl overflow-hidden text-center uppercase px-2 md:px-10'>
+            <h1 className='about-text text-[6vw] sm:text-[4vw] md:text-[3vw] leading-none'>
+            I'm Mubarak Ansari 🌐 from India, a front-end developer 💎 passionate about crafting websites that prioritize smooth animations and engaging user interactions.
+            </h1>
+            {['top-2 right-2', 'top-2 left-2', 'bottom-2 right-2', 'bottom-2 left-2'].map(position => (
+              <div key={position} className={`h-fit w-fit drop-shadow-2xl absolute ${position} rotate-img`}>
+                <img className="w-8" src="/images/Mask group-8.webp" alt="About Element" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default About;
