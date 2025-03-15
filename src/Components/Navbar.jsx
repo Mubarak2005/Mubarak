@@ -100,7 +100,7 @@ const Navbar = ({lenis}) => {
                 </div>
                 <div className={`h-full ${navBar ? 'visible' : 'hidden'} w-full flex flex-col justify-center items-start`}>
                     <h1 className='w-fit h-full px-5 text-[12vw] sm:text-[10vw] md:text-[5vw] relative group hover:cursor-pointer flex justify-center items-center'>Menu
-                        <span className='absolute left-1/2 -translate-x-1/2 font-[Abuget] gradient-anim text-[20vw] sm:text-[15vw] md:text-[7vw] px-5 text-center'>Menu</span>
+                        <span className='absolute left-1/2 -translate-x-1/2 font-[Abuget] text-[#ef3750] text-[20vw] sm:text-[15vw] md:text-[7vw] px-5 text-center'>Menu</span>
                     </h1>
                     
                     <div className='w-full h-full text-[8vw] sm:text-[6vw] md:text-[3.5vw] xl:text-[2.5vw] flex justify-center items-start flex-col'>
@@ -112,7 +112,7 @@ const Navbar = ({lenis}) => {
                                     onClick={() => scrollToSection(sectionId, setNavBar)}>
                                     <MdArrowOutward className='hidden xl:block md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300' />
                                     {item}
-                                    <span className='text-[10vw] md:text-[4vw] pointer-events-none opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[Abuget] gradient-anim2 duration-500 group-hover:opacity-100'>
+                                    <span className='text-[10vw] md:text-[4vw] pointer-events-none opacity-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[Abuget] text-[#ef3750] duration-500 group-hover:opacity-100'>
                                     {item}
                                     </span>
                                 </h1>   
