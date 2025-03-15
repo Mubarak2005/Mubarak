@@ -62,7 +62,7 @@ const About = () => {
           <div className='h-[30%] w-full md:h-full md:w-[30%] flex flex-col gap-5 justify-start items-center '>
             <div className='h-full w-full md:h-[30%] md:w-full border-[.5px] border-[#9d9dea5e] rounded-2xl flex justify-center items-center relative '>
               <h1 className='text-[12vw] md:text-[4.5vw] xl:text-[5vw] font-[Brigends] '>About</h1>
-              <span className='about-h gradient-anim p-4 text-[20vw] md:text-[10vw] font-[Abuget] absolute text-[#2626b1] '>Me</span>
+              <span className='about-h gradient-anim p-4 text-[20vw] md:text-[10vw] font-[Abuget] absolute text-[#ef3750] '>Me</span>
             </div>
             <div className='h-[70%] border-[.5px] border-[#9d9dea5e] rounded-2xl w-full hidden md:flex justify-center items-center relative z-[1] '>
               {/* <img className='w-[90%] absolute blur-md' src="/images/CS_Star_13.webp" alt="About Element" /> */}
