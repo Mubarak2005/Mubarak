@@ -32,12 +32,12 @@ const BeforeAbout = () => {
   return (
     <div className="before-about h-[60vh] sm:h-[70vh] md:h-[110vh] w-full flex justify-center items-center relative">
       <div className="h-fit w-fit text-[9vw] font-[Brigends] uppercase leading-[7vw] tracking-tight flex flex-col justify-center items-center relative">
-        <h1 className="about-cur about-h font-[Abuget] gradient-anim text-[15vw] md:text-[10vw] capitalize leading-none text-[#5ef23c] absolute top-[-30%]  md:top-[-20%] z-[1]">
+        <h1 className="about-cur about-h font-[Abuget] radient-anim text-[20vw] sm:text-[17vw] md:text-[14vw] xl:text-[11vw] capitalize leading-none text-[#ef3750] absolute top-[-35%]  md:top-[-20%] z-[1]">
           Crafting
         </h1>
         <h1 className="expr">Interactive </h1>
-        <h1 className="expr">and</h1>
-        <h1 className="about-cur font-[Abuget] gradient-anim2 p-3 text-[15vw] md:text-[10vw] capitalize leading-none text-[#22a800] absolute z-[1]">
+        <h1 className="expr mb-3">and</h1>
+        <h1 className="about-cur font-[Abuget] radient-anim2 mt-7 p-3 text-[20vw] sm:text-[17vw] md:text-[14vw] xl:text-[11vw] capitalize leading-none text-[#ef3750] absolute z-[1]">
           Modern
         </h1>
         <h1 className="expr mt-7 md:mt-12 ">Web</h1>
