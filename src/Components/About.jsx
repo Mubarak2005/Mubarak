@@ -5,10 +5,10 @@ import React, { useEffect } from 'react';
 const About = () => {
   
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
   
     const textContainer = document.querySelector(".about-text");
-    if (!textContainer) return; // Safeguard in case the element is not found
+    if (!textContainer) return; 
   
     const words = textContainer.innerText.split(' ');
     textContainer.innerHTML = '';
@@ -18,8 +18,8 @@ const About = () => {
       span.textContent = word + ' ';
       
       // Add appropriate class based on the word
-      if (['MUBARAK', 'FRONT-END', 'PASSIONATE', 'SMOOTH', 'ENGAGING'].includes(word)) {
-        span.classList.add('text-[#3989E1]', 'font-[Abuget]');
+      if (['MUBARAK', 'FRONT-END', 'SMOOTH', 'ENGAGING'].includes(word)) {
+        span.classList.add('text-[#0980ff]','font-bold', 'font-[Abuget]');
       } else if (word === 'INTERACTIONS.') {
         span.classList.add('underline');
       }
@@ -62,7 +62,7 @@ const About = () => {
           <div className='h-[30%] w-full md:h-full md:w-[30%] flex flex-col gap-5 justify-start items-center '>
             <div className='h-full w-full md:h-[30%] md:w-full border-[.5px] border-[#9d9dea5e] rounded-2xl flex justify-center items-center relative '>
               <h1 className='text-[12vw] md:text-[4.5vw] xl:text-[5vw] font-[Brigends] '>About</h1>
-              <span className='about-h gradient-anim p-4 text-[20vw] md:text-[10vw] font-[Abuget] absolute text-[#ef3750] '>Me</span>
+              <span className='about-h p-4 text-[20vw] md:text-[10vw] font-[Abuget] absolute text-[#ef3750] '>Me</span>
             </div>
             <div className='h-[70%] border-[.5px] border-[#9d9dea5e] rounded-2xl w-full hidden md:flex justify-center items-center relative z-[1] '>
               {/* <img className='w-[90%] absolute blur-md' src="/images/CS_Star_13.webp" alt="About Element" /> */}
@@ -70,9 +70,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className='h-[60%] w-full md:w-[70%] md:h-full relative flex justify-center items-center border-[.5px] border-[#9d9dea5e] rounded-2xl overflow-hidden text-center uppercase px-2 md:px-10'>
-            <h1 className='about-text text-[6vw] sm:text-[4vw] md:text-[3vw] leading-none'>
-            I'm Mubarak Ansari 🌐 from India, a front-end developer 💎 passionate about crafting websites that prioritize smooth animations and engaging user interactions.
+          <div className='h-[60%] w-full md:w-[70%] md:h-full relative flex justify-center items-center border-[.5px] border-[#9d9dea5e] rounded-2xl overflow-hidden text-center px-2 md:px-10'>
+            <h1 className='about-text font-[Hanson] uppercase text-[6vw] sm:text-[4vw] md:text-[3vw] leading-none'>
+              I'm Mubarak Ansari 🌐 from India, a front-end developer 💎 passionate about crafting websites that prioritize smooth animations and engaging user interactions.
             </h1>
             {['top-2 right-2', 'top-2 left-2', 'bottom-2 right-2', 'bottom-2 left-2'].map(position => (
               <div key={position} className={`h-fit w-fit drop-shadow-2xl absolute ${position} rotate-img`}>
