@@ -10,13 +10,16 @@ const Loading = ({ lenis }) => {
         lenis.stop(); // Stop Lenis during loading
         
         tl.fromTo(".load-text span",
-            { opacity: 0 },
-            { opacity: 1, stagger: 0.1, delay: 0.3, duration: 0.8, ease: "power2.out" }
-        ).to(".load-text span", {
-            filter: "blur(5px)",
+            { opacity: 0,filter: "blur(10px)", },
+            { opacity: 1,filter: "blur(0px)", stagger: 0.1, delay: 0.3, duration: 0.8, ease: "power2.out",}
+        ).to(".load-text",{
+            scale:1.1,
+            duration:2,
+        }).to(".load-text span", {
+            filter: "blur(10px)",
             opacity: 0,
             duration: 0.5,
-            delay: 2,
+            // delay: 1,
             ease: "power2.out",
             stagger: 0.1,
         }).to(".loading-section", {
